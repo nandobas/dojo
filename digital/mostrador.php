@@ -20,12 +20,32 @@ class Mostrador
 
     private function escrevePalavra(){
 
-        $linha_led['1']=' __';
-        $linha_led['2']='|__|';
-        $linha_led['3']='|  |';
+        $linha_led_a[0]=' __';
+        $linha_led_a[1]='|__|';
+        $linha_led_a[2]='|  |';
 
-        foreach($linha_led as $linha){
-            echo $linha."\n";
+        $linha_led_b[0]=' __';
+        $linha_led_b[1]='|__|';
+        $linha_led_b[2]='|__/';
+
+        $lista = [0=>[], 1=>[], 2=>[]];
+        $lista[0][]=$linha_led_a[0];        
+        $lista[0][]=$linha_led_b[0];
+
+        /*$lista[2][]=$linha_led_a[1];
+        $lista[1][]=$linha_led_b[1];
+
+        $lista[1][]=$linha_led_a[2];
+        $lista[2][]=$linha_led_b[2];*/
+
+        foreach($lista as $key=>$digitos){
+            
+            foreach($digitos as $key_num_digito=>$digito){
+                echo $digito."   |   ";
+                echo $key_num_digito;
+            }
+            echo "\n";
+            //echo "\n";//quebra proxima linha
         }
 
     }
