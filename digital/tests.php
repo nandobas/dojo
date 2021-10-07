@@ -1,6 +1,6 @@
 <?php 
 require_once("mostrador.php");
 
-$objMostrador = new Mostrador("Hello Word!");
+$objMostrador = new Mostrador("Maravilha esta funcionando");
 
 $objMostrador->saida();
